@@ -14,6 +14,7 @@ class Player
     @name = ask_player_name
   end
 
+  #on demande le nom
   def ask_player_name
     puts "Rentre le pseudo du joueur #{@symbol} : "
     print '> '
@@ -21,6 +22,7 @@ class Player
     name
   end
 
+  #logique par joueur pour récup l'input
   def get_coordinates
     input = nil
     until input.is_a?(Integer) && (1..9).include?(input)

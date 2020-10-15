@@ -3,14 +3,15 @@
 require_relative 'player'
 
 class Display
-  attr_accessor :canvas
+  attr_accessor :canvas, :root
 
   def initialize
-    root = TkRoot.new
-    root.title = 'Tic Tac Toe'
-    root.minsize(600, 300)
+    @root = TkRoot.new
+    @root.title = 'Tic Tac Toe'
+    @root.minsize(600, 300)
     @canvas = TkCanvas.new(@root) do
       place('height' => 800, 'width' => 800)
+      
     end
 
     # Line 1
@@ -24,7 +25,7 @@ class Display
     # Column 3
     TkcLine.new(@canvas, 300, 0, 300, 300, 'width' => 2)
 
-    text = TkText.new(root) do
+    text = TkText.new(@root) do
       width 30
       height 20
       borderwidth 1
@@ -33,6 +34,7 @@ class Display
     end
 
     text.insert 'end', "Salut les moussaillons !\n\n Alors ce projet ? Une petite partie ? :D \n\nPlayer 1 : X\n\nPlayer 2 : O"
+
   end
 
   def cross(number)
