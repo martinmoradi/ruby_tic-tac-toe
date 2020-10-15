@@ -3,4 +3,5 @@ ruby '2.7.1'
 gem 'rspec'
 gem 'pry'
 gem 'rubocop'
+gem 'tk'
 gem 'solargraph', group: :development
