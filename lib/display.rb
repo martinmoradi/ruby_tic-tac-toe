@@ -1,17 +1,18 @@
-class Display
+require 'bundler'
+Bundler.require
 
-require_relative 'game'
 require_relative 'player'
+# (!) Appeler player names (!)
+
+class Display
 
   attr_accessor :canvas
 
   def initialize
 
     root = TkRoot.new
-    root.title = "Tic-tac-toe"
-
+    root.title = "Tic Tac Toe"
     root.minsize(500,300)
-
     @canvas = TkCanvas.new(@root) do
       place('height' => 300, 'width' => 300)
     end
@@ -118,9 +119,7 @@ require_relative 'player'
   end
 
 
-
 end
-
 
 
 
