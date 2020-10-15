@@ -8,6 +8,8 @@ Merci de lancer les commandes suivantes sur votre terminal pour pouvoir lancer l
 
 
 brew install tcl
+
+
 bundle install
 
 Bisous les moussaillons !
