@@ -12,30 +12,30 @@ require 'player'
 class Application
   def perform
     keep_playing = true
-    while keep_playing  
+    while keep_playing
       my_game = Game.new
       Tk.update
       my_game.play
-      keep_playing = continue?      
+      keep_playing = continue?
+    end
   end
-end
 
-#méthode pour loop (mais ça bug de toutes facons :D)
+  # méthode pour loop (mais ça bug de toutes facons :D)
   def continue?
     input = nil
-    unless input == "y" || "n"
-      puts "Voulez-vous continuer ? Y/N"
-      print "> "
+    unless input == 'y' || 'n'
+      puts 'Voulez-vous continuer ? Y/N'
+      print '> '
       input = gets.chomp
-      if input.downcase == "y"
+      if input.downcase == 'y'
         true
-      elsif input.downcase == "n"
+      elsif input.downcase == 'n'
         false
       end
-  end
+    end
   end
 end
 
 Application.new.perform
 Tk.update
-Tk.mainloop 
+Tk.mainloop

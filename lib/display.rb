@@ -11,7 +11,6 @@ class Display
     @root.minsize(600, 300)
     @canvas = TkCanvas.new(@root) do
       place('height' => 800, 'width' => 800)
-      
     end
 
     # Line 1
@@ -34,7 +33,6 @@ class Display
     end
 
     text.insert 'end', "Salut les moussaillons !\n\n Alors ce projet ? Une petite partie ? :D \n\nPlayer 1 : X\n\nPlayer 2 : O"
-
   end
 
   def cross(number)
