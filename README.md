@@ -5,6 +5,8 @@ Ce programme a été réalisé en Ruby.
 Important !!
 
 Merci de lancer les commandes suivantes sur votre terminal pour pouvoir lancer le programme ! 
+
+
 brew install tcl
 bundle install
 
